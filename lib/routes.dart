@@ -3,6 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'home/home_bloc.dart';
 import 'home/home_page.dart';
+import 'orders/orders_bloc.dart';
+import 'orders/orders_list/orders_list_bloc.dart';
+import 'orders/orders_list/orders_list_page.dart';
 
 enum AppRoute {HOME, ORDERS}
 
@@ -18,6 +21,18 @@ PageCreator page(AppRoute route, {Object arguments}) {
           ),
         ],
         child: HomePage(),
+      );
+    case AppRoute.ORDERS:
+      return ({arguments}) => MultiBlocProvider(
+        providers: [
+          BlocProvider<OrdersBloc>(
+            create: (context) => OrdersBloc(),
+          ),
+          BlocProvider<OrdersListBloc>(
+            create: (context) => OrdersListBloc(),
+          ),
+        ],
+        child: OrdersListPage(),
       );
   }
   return null;

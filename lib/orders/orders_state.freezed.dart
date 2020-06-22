@@ -14,10 +14,14 @@ class _$OrdersStateTearOff {
 
   _OrdersState call(
       {@required List<Request<Customer>> customers,
-      @required List<Request<Item>> items}) {
+      @required List<Request<Car>> cars,
+      @required List<Request<City>> cities,
+      @required List<Request<Order>> orders}) {
     return _OrdersState(
       customers: customers,
-      items: items,
+      cars: cars,
+      cities: cities,
+      orders: orders,
     );
   }
 }
@@ -27,7 +31,9 @@ const $OrdersState = _$OrdersStateTearOff();
 
 mixin _$OrdersState {
   List<Request<Customer>> get customers;
-  List<Request<Item>> get items;
+  List<Request<Car>> get cars;
+  List<Request<City>> get cities;
+  List<Request<Order>> get orders;
 
   $OrdersStateCopyWith<OrdersState> get copyWith;
 }
@@ -36,7 +42,11 @@ abstract class $OrdersStateCopyWith<$Res> {
   factory $OrdersStateCopyWith(
           OrdersState value, $Res Function(OrdersState) then) =
       _$OrdersStateCopyWithImpl<$Res>;
-  $Res call({List<Request<Customer>> customers, List<Request<Item>> items});
+  $Res call(
+      {List<Request<Customer>> customers,
+      List<Request<Car>> cars,
+      List<Request<City>> cities,
+      List<Request<Order>> orders});
 }
 
 class _$OrdersStateCopyWithImpl<$Res> implements $OrdersStateCopyWith<$Res> {
@@ -49,13 +59,18 @@ class _$OrdersStateCopyWithImpl<$Res> implements $OrdersStateCopyWith<$Res> {
   @override
   $Res call({
     Object customers = freezed,
-    Object items = freezed,
+    Object cars = freezed,
+    Object cities = freezed,
+    Object orders = freezed,
   }) {
     return _then(_value.copyWith(
       customers: customers == freezed
           ? _value.customers
           : customers as List<Request<Customer>>,
-      items: items == freezed ? _value.items : items as List<Request<Item>>,
+      cars: cars == freezed ? _value.cars : cars as List<Request<Car>>,
+      cities: cities == freezed ? _value.cities : cities as List<Request<City>>,
+      orders:
+          orders == freezed ? _value.orders : orders as List<Request<Order>>,
     ));
   }
 }
@@ -66,7 +81,11 @@ abstract class _$OrdersStateCopyWith<$Res>
           _OrdersState value, $Res Function(_OrdersState) then) =
       __$OrdersStateCopyWithImpl<$Res>;
   @override
-  $Res call({List<Request<Customer>> customers, List<Request<Item>> items});
+  $Res call(
+      {List<Request<Customer>> customers,
+      List<Request<Car>> cars,
+      List<Request<City>> cities,
+      List<Request<Order>> orders});
 }
 
 class __$OrdersStateCopyWithImpl<$Res> extends _$OrdersStateCopyWithImpl<$Res>
@@ -81,30 +100,45 @@ class __$OrdersStateCopyWithImpl<$Res> extends _$OrdersStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object customers = freezed,
-    Object items = freezed,
+    Object cars = freezed,
+    Object cities = freezed,
+    Object orders = freezed,
   }) {
     return _then(_OrdersState(
       customers: customers == freezed
           ? _value.customers
           : customers as List<Request<Customer>>,
-      items: items == freezed ? _value.items : items as List<Request<Item>>,
+      cars: cars == freezed ? _value.cars : cars as List<Request<Car>>,
+      cities: cities == freezed ? _value.cities : cities as List<Request<City>>,
+      orders:
+          orders == freezed ? _value.orders : orders as List<Request<Order>>,
     ));
   }
 }
 
 class _$_OrdersState implements _OrdersState {
-  const _$_OrdersState({@required this.customers, @required this.items})
+  const _$_OrdersState(
+      {@required this.customers,
+      @required this.cars,
+      @required this.cities,
+      @required this.orders})
       : assert(customers != null),
-        assert(items != null);
+        assert(cars != null),
+        assert(cities != null),
+        assert(orders != null);
 
   @override
   final List<Request<Customer>> customers;
   @override
-  final List<Request<Item>> items;
+  final List<Request<Car>> cars;
+  @override
+  final List<Request<City>> cities;
+  @override
+  final List<Request<Order>> orders;
 
   @override
   String toString() {
-    return 'OrdersState(customers: $customers, items: $items)';
+    return 'OrdersState(customers: $customers, cars: $cars, cities: $cities, orders: $orders)';
   }
 
   @override
@@ -114,15 +148,21 @@ class _$_OrdersState implements _OrdersState {
             (identical(other.customers, customers) ||
                 const DeepCollectionEquality()
                     .equals(other.customers, customers)) &&
-            (identical(other.items, items) ||
-                const DeepCollectionEquality().equals(other.items, items)));
+            (identical(other.cars, cars) ||
+                const DeepCollectionEquality().equals(other.cars, cars)) &&
+            (identical(other.cities, cities) ||
+                const DeepCollectionEquality().equals(other.cities, cities)) &&
+            (identical(other.orders, orders) ||
+                const DeepCollectionEquality().equals(other.orders, orders)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(customers) ^
-      const DeepCollectionEquality().hash(items);
+      const DeepCollectionEquality().hash(cars) ^
+      const DeepCollectionEquality().hash(cities) ^
+      const DeepCollectionEquality().hash(orders);
 
   @override
   _$OrdersStateCopyWith<_OrdersState> get copyWith =>
@@ -132,12 +172,18 @@ class _$_OrdersState implements _OrdersState {
 abstract class _OrdersState implements OrdersState {
   const factory _OrdersState(
       {@required List<Request<Customer>> customers,
-      @required List<Request<Item>> items}) = _$_OrdersState;
+      @required List<Request<Car>> cars,
+      @required List<Request<City>> cities,
+      @required List<Request<Order>> orders}) = _$_OrdersState;
 
   @override
   List<Request<Customer>> get customers;
   @override
-  List<Request<Item>> get items;
+  List<Request<Car>> get cars;
+  @override
+  List<Request<City>> get cities;
+  @override
+  List<Request<Order>> get orders;
   @override
   _$OrdersStateCopyWith<_OrdersState> get copyWith;
 }

@@ -12,6 +12,15 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeState get initialState => HomeState(title: _title);
 
   @override
+  void onEvent(HomeEvent event) {
+    super.onEvent(event);
+    event.when(
+        transfersPressed: null,
+        paymentsPressed: null
+    );
+  }
+
+  @override
   Stream<HomeState> mapEventToState(HomeEvent event) async* {
     yield event.when(
         transfersPressed: () => state,
