@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'app_event.dart';
 
@@ -12,14 +12,16 @@ T _$identity<T>(T value) => value;
 class _$AppEventTearOff {
   const _$AppEventTearOff();
 
+// ignore: unused_element
   SetTheme setTheme({@required bool isDark}) {
     return SetTheme(
       isDark: isDark,
     );
   }
 
-  doNothing nothing() {
-    return const doNothing();
+// ignore: unused_element
+  DoNothing nothing() {
+    return const DoNothing();
   }
 }
 
@@ -41,12 +43,12 @@ mixin _$AppEvent {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result setTheme(SetTheme value),
-    @required Result nothing(doNothing value),
+    @required Result nothing(DoNothing value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result setTheme(SetTheme value),
-    Result nothing(doNothing value),
+    Result nothing(DoNothing value),
     @required Result orElse(),
   });
 }
@@ -144,7 +146,7 @@ class _$SetTheme implements SetTheme {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result setTheme(SetTheme value),
-    @required Result nothing(doNothing value),
+    @required Result nothing(DoNothing value),
   }) {
     assert(setTheme != null);
     assert(nothing != null);
@@ -155,7 +157,7 @@ class _$SetTheme implements SetTheme {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result setTheme(SetTheme value),
-    Result nothing(doNothing value),
+    Result nothing(DoNothing value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -173,22 +175,22 @@ abstract class SetTheme implements AppEvent {
   $SetThemeCopyWith<SetTheme> get copyWith;
 }
 
-abstract class $doNothingCopyWith<$Res> {
-  factory $doNothingCopyWith(doNothing value, $Res Function(doNothing) then) =
-      _$doNothingCopyWithImpl<$Res>;
+abstract class $DoNothingCopyWith<$Res> {
+  factory $DoNothingCopyWith(DoNothing value, $Res Function(DoNothing) then) =
+      _$DoNothingCopyWithImpl<$Res>;
 }
 
-class _$doNothingCopyWithImpl<$Res> extends _$AppEventCopyWithImpl<$Res>
-    implements $doNothingCopyWith<$Res> {
-  _$doNothingCopyWithImpl(doNothing _value, $Res Function(doNothing) _then)
-      : super(_value, (v) => _then(v as doNothing));
+class _$DoNothingCopyWithImpl<$Res> extends _$AppEventCopyWithImpl<$Res>
+    implements $DoNothingCopyWith<$Res> {
+  _$DoNothingCopyWithImpl(DoNothing _value, $Res Function(DoNothing) _then)
+      : super(_value, (v) => _then(v as DoNothing));
 
   @override
-  doNothing get _value => super._value as doNothing;
+  DoNothing get _value => super._value as DoNothing;
 }
 
-class _$doNothing implements doNothing {
-  const _$doNothing();
+class _$DoNothing implements DoNothing {
+  const _$DoNothing();
 
   @override
   String toString() {
@@ -197,7 +199,7 @@ class _$doNothing implements doNothing {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is doNothing);
+    return identical(this, other) || (other is DoNothing);
   }
 
   @override
@@ -232,7 +234,7 @@ class _$doNothing implements doNothing {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result setTheme(SetTheme value),
-    @required Result nothing(doNothing value),
+    @required Result nothing(DoNothing value),
   }) {
     assert(setTheme != null);
     assert(nothing != null);
@@ -243,7 +245,7 @@ class _$doNothing implements doNothing {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result setTheme(SetTheme value),
-    Result nothing(doNothing value),
+    Result nothing(DoNothing value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -254,6 +256,6 @@ class _$doNothing implements doNothing {
   }
 }
 
-abstract class doNothing implements AppEvent {
-  const factory doNothing() = _$doNothing;
+abstract class DoNothing implements AppEvent {
+  const factory DoNothing() = _$DoNothing;
 }

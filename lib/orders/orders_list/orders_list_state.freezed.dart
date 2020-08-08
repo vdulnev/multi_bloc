@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'orders_list_state.dart';
 
@@ -12,8 +12,9 @@ T _$identity<T>(T value) => value;
 class _$OrdersListStateTearOff {
   const _$OrdersListStateTearOff();
 
+// ignore: unused_element
   _OrdersListState call(
-      {@required String title, @required List<Request<Order>> orders}) {
+      {@required String title, @required Request<Orders> orders}) {
     return _OrdersListState(
       title: title,
       orders: orders,
@@ -26,7 +27,7 @@ const $OrdersListState = _$OrdersListStateTearOff();
 
 mixin _$OrdersListState {
   String get title;
-  List<Request<Order>> get orders;
+  Request<Orders> get orders;
 
   $OrdersListStateCopyWith<OrdersListState> get copyWith;
 }
@@ -35,7 +36,9 @@ abstract class $OrdersListStateCopyWith<$Res> {
   factory $OrdersListStateCopyWith(
           OrdersListState value, $Res Function(OrdersListState) then) =
       _$OrdersListStateCopyWithImpl<$Res>;
-  $Res call({String title, List<Request<Order>> orders});
+  $Res call({String title, Request<Orders> orders});
+
+  $RequestCopyWith<Orders, $Res> get orders;
 }
 
 class _$OrdersListStateCopyWithImpl<$Res>
@@ -53,9 +56,18 @@ class _$OrdersListStateCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       title: title == freezed ? _value.title : title as String,
-      orders:
-          orders == freezed ? _value.orders : orders as List<Request<Order>>,
+      orders: orders == freezed ? _value.orders : orders as Request<Orders>,
     ));
+  }
+
+  @override
+  $RequestCopyWith<Orders, $Res> get orders {
+    if (_value.orders == null) {
+      return null;
+    }
+    return $RequestCopyWith<Orders, $Res>(_value.orders, (value) {
+      return _then(_value.copyWith(orders: value));
+    });
   }
 }
 
@@ -65,7 +77,10 @@ abstract class _$OrdersListStateCopyWith<$Res>
           _OrdersListState value, $Res Function(_OrdersListState) then) =
       __$OrdersListStateCopyWithImpl<$Res>;
   @override
-  $Res call({String title, List<Request<Order>> orders});
+  $Res call({String title, Request<Orders> orders});
+
+  @override
+  $RequestCopyWith<Orders, $Res> get orders;
 }
 
 class __$OrdersListStateCopyWithImpl<$Res>
@@ -85,8 +100,7 @@ class __$OrdersListStateCopyWithImpl<$Res>
   }) {
     return _then(_OrdersListState(
       title: title == freezed ? _value.title : title as String,
-      orders:
-          orders == freezed ? _value.orders : orders as List<Request<Order>>,
+      orders: orders == freezed ? _value.orders : orders as Request<Orders>,
     ));
   }
 }
@@ -99,7 +113,7 @@ class _$_OrdersListState implements _OrdersListState {
   @override
   final String title;
   @override
-  final List<Request<Order>> orders;
+  final Request<Orders> orders;
 
   @override
   String toString() {
@@ -130,12 +144,12 @@ class _$_OrdersListState implements _OrdersListState {
 abstract class _OrdersListState implements OrdersListState {
   factory _OrdersListState(
       {@required String title,
-      @required List<Request<Order>> orders}) = _$_OrdersListState;
+      @required Request<Orders> orders}) = _$_OrdersListState;
 
   @override
   String get title;
   @override
-  List<Request<Order>> get orders;
+  Request<Orders> get orders;
   @override
   _$OrdersListStateCopyWith<_OrdersListState> get copyWith;
 }

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../models.dart';
-import '../../request.dart';
+import '../../generics/request.dart';
 
 part 'orders_list_state.freezed.dart';
 
@@ -9,5 +9,5 @@ part 'orders_list_state.freezed.dart';
 abstract class OrdersListState with _$OrdersListState {
   factory OrdersListState(
       {@required String title,
-      @required List<Request<Order>> orders}) = _OrdersListState;
+      @required Request<Orders> orders}) = _OrdersListState;
 }

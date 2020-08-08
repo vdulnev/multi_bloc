@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'request.dart';
 
@@ -12,16 +12,24 @@ T _$identity<T>(T value) => value;
 class _$RequestTearOff {
   const _$RequestTearOff();
 
+// ignore: unused_element
+  Empty<T> empty<T>() {
+    return Empty<T>();
+  }
+
+// ignore: unused_element
   Loading<T> loading<T>() {
     return Loading<T>();
   }
 
+// ignore: unused_element
   Data<T> data<T>(T data) {
     return Data<T>(
       data,
     );
   }
 
+// ignore: unused_element
   Error<T> error<T>(String error) {
     return Error<T>(
       error,
@@ -35,12 +43,14 @@ const $Request = _$RequestTearOff();
 mixin _$Request<T> {
   @optionalTypeArgs
   Result when<Result extends Object>({
+    @required Result empty(),
     @required Result loading(),
     @required Result data(T data),
     @required Result error(String error),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
+    Result empty(),
     Result loading(),
     Result data(T data),
     Result error(String error),
@@ -48,12 +58,14 @@ mixin _$Request<T> {
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
+    @required Result empty(Empty<T> value),
     @required Result loading(Loading<T> value),
     @required Result data(Data<T> value),
     @required Result error(Error<T> value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
+    Result empty(Empty<T> value),
     Result loading(Loading<T> value),
     Result data(Data<T> value),
     Result error(Error<T> value),
@@ -72,6 +84,103 @@ class _$RequestCopyWithImpl<T, $Res> implements $RequestCopyWith<T, $Res> {
   final Request<T> _value;
   // ignore: unused_field
   final $Res Function(Request<T>) _then;
+}
+
+abstract class $EmptyCopyWith<T, $Res> {
+  factory $EmptyCopyWith(Empty<T> value, $Res Function(Empty<T>) then) =
+      _$EmptyCopyWithImpl<T, $Res>;
+}
+
+class _$EmptyCopyWithImpl<T, $Res> extends _$RequestCopyWithImpl<T, $Res>
+    implements $EmptyCopyWith<T, $Res> {
+  _$EmptyCopyWithImpl(Empty<T> _value, $Res Function(Empty<T>) _then)
+      : super(_value, (v) => _then(v as Empty<T>));
+
+  @override
+  Empty<T> get _value => super._value as Empty<T>;
+}
+
+class _$Empty<T> implements Empty<T> {
+  const _$Empty();
+
+  @override
+  String toString() {
+    return 'Request<$T>.empty()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is Empty<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result empty(),
+    @required Result loading(),
+    @required Result data(T data),
+    @required Result error(String error),
+  }) {
+    assert(empty != null);
+    assert(loading != null);
+    assert(data != null);
+    assert(error != null);
+    return empty();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result empty(),
+    Result loading(),
+    Result data(T data),
+    Result error(String error),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (empty != null) {
+      return empty();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result empty(Empty<T> value),
+    @required Result loading(Loading<T> value),
+    @required Result data(Data<T> value),
+    @required Result error(Error<T> value),
+  }) {
+    assert(empty != null);
+    assert(loading != null);
+    assert(data != null);
+    assert(error != null);
+    return empty(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result empty(Empty<T> value),
+    Result loading(Loading<T> value),
+    Result data(Data<T> value),
+    Result error(Error<T> value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (empty != null) {
+      return empty(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Empty<T> implements Request<T> {
+  const factory Empty() = _$Empty<T>;
 }
 
 abstract class $LoadingCopyWith<T, $Res> {
@@ -107,10 +216,12 @@ class _$Loading<T> implements Loading<T> {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
+    @required Result empty(),
     @required Result loading(),
     @required Result data(T data),
     @required Result error(String error),
   }) {
+    assert(empty != null);
     assert(loading != null);
     assert(data != null);
     assert(error != null);
@@ -120,6 +231,7 @@ class _$Loading<T> implements Loading<T> {
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
+    Result empty(),
     Result loading(),
     Result data(T data),
     Result error(String error),
@@ -135,10 +247,12 @@ class _$Loading<T> implements Loading<T> {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
+    @required Result empty(Empty<T> value),
     @required Result loading(Loading<T> value),
     @required Result data(Data<T> value),
     @required Result error(Error<T> value),
   }) {
+    assert(empty != null);
     assert(loading != null);
     assert(data != null);
     assert(error != null);
@@ -148,6 +262,7 @@ class _$Loading<T> implements Loading<T> {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
+    Result empty(Empty<T> value),
     Result loading(Loading<T> value),
     Result data(Data<T> value),
     Result error(Error<T> value),
@@ -219,10 +334,12 @@ class _$Data<T> implements Data<T> {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
+    @required Result empty(),
     @required Result loading(),
     @required Result data(T data),
     @required Result error(String error),
   }) {
+    assert(empty != null);
     assert(loading != null);
     assert(data != null);
     assert(error != null);
@@ -232,6 +349,7 @@ class _$Data<T> implements Data<T> {
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
+    Result empty(),
     Result loading(),
     Result data(T data),
     Result error(String error),
@@ -247,10 +365,12 @@ class _$Data<T> implements Data<T> {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
+    @required Result empty(Empty<T> value),
     @required Result loading(Loading<T> value),
     @required Result data(Data<T> value),
     @required Result error(Error<T> value),
   }) {
+    assert(empty != null);
     assert(loading != null);
     assert(data != null);
     assert(error != null);
@@ -260,6 +380,7 @@ class _$Data<T> implements Data<T> {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
+    Result empty(Empty<T> value),
     Result loading(Loading<T> value),
     Result data(Data<T> value),
     Result error(Error<T> value),
@@ -334,10 +455,12 @@ class _$Error<T> implements Error<T> {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
+    @required Result empty(),
     @required Result loading(),
     @required Result data(T data),
     @required Result error(String error),
   }) {
+    assert(empty != null);
     assert(loading != null);
     assert(data != null);
     assert(error != null);
@@ -347,6 +470,7 @@ class _$Error<T> implements Error<T> {
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
+    Result empty(),
     Result loading(),
     Result data(T data),
     Result error(String error),
@@ -362,10 +486,12 @@ class _$Error<T> implements Error<T> {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
+    @required Result empty(Empty<T> value),
     @required Result loading(Loading<T> value),
     @required Result data(Data<T> value),
     @required Result error(Error<T> value),
   }) {
+    assert(empty != null);
     assert(loading != null);
     assert(data != null);
     assert(error != null);
@@ -375,6 +501,7 @@ class _$Error<T> implements Error<T> {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
+    Result empty(Empty<T> value),
     Result loading(Loading<T> value),
     Result data(Data<T> value),
     Result error(Error<T> value),

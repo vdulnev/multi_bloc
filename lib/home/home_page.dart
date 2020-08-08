@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: RaisedButton(
                           child: Text(
-                            'Payments',
+                            'Orders',
                           ),
                           onPressed: () => Navigator.push(
                             context,

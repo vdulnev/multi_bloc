@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'orders_state.dart';
 
@@ -12,16 +12,15 @@ T _$identity<T>(T value) => value;
 class _$OrdersStateTearOff {
   const _$OrdersStateTearOff();
 
-  _OrdersState call(
-      {@required List<Request<Customer>> customers,
-      @required List<Request<Car>> cars,
-      @required List<Request<City>> cities,
-      @required List<Request<Order>> orders}) {
-    return _OrdersState(
+// ignore: unused_element
+  _Data call(
+      {@required Request<Customers> customers,
+      @required Request<Cars> cars,
+      @required Request<Cities> cities}) {
+    return _Data(
       customers: customers,
       cars: cars,
       cities: cities,
-      orders: orders,
     );
   }
 }
@@ -30,10 +29,9 @@ class _$OrdersStateTearOff {
 const $OrdersState = _$OrdersStateTearOff();
 
 mixin _$OrdersState {
-  List<Request<Customer>> get customers;
-  List<Request<Car>> get cars;
-  List<Request<City>> get cities;
-  List<Request<Order>> get orders;
+  Request<Customers> get customers;
+  Request<Cars> get cars;
+  Request<Cities> get cities;
 
   $OrdersStateCopyWith<OrdersState> get copyWith;
 }
@@ -43,10 +41,13 @@ abstract class $OrdersStateCopyWith<$Res> {
           OrdersState value, $Res Function(OrdersState) then) =
       _$OrdersStateCopyWithImpl<$Res>;
   $Res call(
-      {List<Request<Customer>> customers,
-      List<Request<Car>> cars,
-      List<Request<City>> cities,
-      List<Request<Order>> orders});
+      {Request<Customers> customers,
+      Request<Cars> cars,
+      Request<Cities> cities});
+
+  $RequestCopyWith<Customers, $Res> get customers;
+  $RequestCopyWith<Cars, $Res> get cars;
+  $RequestCopyWith<Cities, $Res> get cities;
 }
 
 class _$OrdersStateCopyWithImpl<$Res> implements $OrdersStateCopyWith<$Res> {
@@ -61,99 +62,118 @@ class _$OrdersStateCopyWithImpl<$Res> implements $OrdersStateCopyWith<$Res> {
     Object customers = freezed,
     Object cars = freezed,
     Object cities = freezed,
-    Object orders = freezed,
   }) {
     return _then(_value.copyWith(
       customers: customers == freezed
           ? _value.customers
-          : customers as List<Request<Customer>>,
-      cars: cars == freezed ? _value.cars : cars as List<Request<Car>>,
-      cities: cities == freezed ? _value.cities : cities as List<Request<City>>,
-      orders:
-          orders == freezed ? _value.orders : orders as List<Request<Order>>,
+          : customers as Request<Customers>,
+      cars: cars == freezed ? _value.cars : cars as Request<Cars>,
+      cities: cities == freezed ? _value.cities : cities as Request<Cities>,
     ));
+  }
+
+  @override
+  $RequestCopyWith<Customers, $Res> get customers {
+    if (_value.customers == null) {
+      return null;
+    }
+    return $RequestCopyWith<Customers, $Res>(_value.customers, (value) {
+      return _then(_value.copyWith(customers: value));
+    });
+  }
+
+  @override
+  $RequestCopyWith<Cars, $Res> get cars {
+    if (_value.cars == null) {
+      return null;
+    }
+    return $RequestCopyWith<Cars, $Res>(_value.cars, (value) {
+      return _then(_value.copyWith(cars: value));
+    });
+  }
+
+  @override
+  $RequestCopyWith<Cities, $Res> get cities {
+    if (_value.cities == null) {
+      return null;
+    }
+    return $RequestCopyWith<Cities, $Res>(_value.cities, (value) {
+      return _then(_value.copyWith(cities: value));
+    });
   }
 }
 
-abstract class _$OrdersStateCopyWith<$Res>
-    implements $OrdersStateCopyWith<$Res> {
-  factory _$OrdersStateCopyWith(
-          _OrdersState value, $Res Function(_OrdersState) then) =
-      __$OrdersStateCopyWithImpl<$Res>;
+abstract class _$DataCopyWith<$Res> implements $OrdersStateCopyWith<$Res> {
+  factory _$DataCopyWith(_Data value, $Res Function(_Data) then) =
+      __$DataCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<Request<Customer>> customers,
-      List<Request<Car>> cars,
-      List<Request<City>> cities,
-      List<Request<Order>> orders});
-}
-
-class __$OrdersStateCopyWithImpl<$Res> extends _$OrdersStateCopyWithImpl<$Res>
-    implements _$OrdersStateCopyWith<$Res> {
-  __$OrdersStateCopyWithImpl(
-      _OrdersState _value, $Res Function(_OrdersState) _then)
-      : super(_value, (v) => _then(v as _OrdersState));
+      {Request<Customers> customers,
+      Request<Cars> cars,
+      Request<Cities> cities});
 
   @override
-  _OrdersState get _value => super._value as _OrdersState;
+  $RequestCopyWith<Customers, $Res> get customers;
+  @override
+  $RequestCopyWith<Cars, $Res> get cars;
+  @override
+  $RequestCopyWith<Cities, $Res> get cities;
+}
+
+class __$DataCopyWithImpl<$Res> extends _$OrdersStateCopyWithImpl<$Res>
+    implements _$DataCopyWith<$Res> {
+  __$DataCopyWithImpl(_Data _value, $Res Function(_Data) _then)
+      : super(_value, (v) => _then(v as _Data));
+
+  @override
+  _Data get _value => super._value as _Data;
 
   @override
   $Res call({
     Object customers = freezed,
     Object cars = freezed,
     Object cities = freezed,
-    Object orders = freezed,
   }) {
-    return _then(_OrdersState(
+    return _then(_Data(
       customers: customers == freezed
           ? _value.customers
-          : customers as List<Request<Customer>>,
-      cars: cars == freezed ? _value.cars : cars as List<Request<Car>>,
-      cities: cities == freezed ? _value.cities : cities as List<Request<City>>,
-      orders:
-          orders == freezed ? _value.orders : orders as List<Request<Order>>,
+          : customers as Request<Customers>,
+      cars: cars == freezed ? _value.cars : cars as Request<Cars>,
+      cities: cities == freezed ? _value.cities : cities as Request<Cities>,
     ));
   }
 }
 
-class _$_OrdersState implements _OrdersState {
-  const _$_OrdersState(
-      {@required this.customers,
-      @required this.cars,
-      @required this.cities,
-      @required this.orders})
+class _$_Data implements _Data {
+  const _$_Data(
+      {@required this.customers, @required this.cars, @required this.cities})
       : assert(customers != null),
         assert(cars != null),
-        assert(cities != null),
-        assert(orders != null);
+        assert(cities != null);
 
   @override
-  final List<Request<Customer>> customers;
+  final Request<Customers> customers;
   @override
-  final List<Request<Car>> cars;
+  final Request<Cars> cars;
   @override
-  final List<Request<City>> cities;
-  @override
-  final List<Request<Order>> orders;
+  final Request<Cities> cities;
 
   @override
   String toString() {
-    return 'OrdersState(customers: $customers, cars: $cars, cities: $cities, orders: $orders)';
+    return 'OrdersState(customers: $customers, cars: $cars, cities: $cities)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _OrdersState &&
+        (other is _Data &&
             (identical(other.customers, customers) ||
                 const DeepCollectionEquality()
                     .equals(other.customers, customers)) &&
             (identical(other.cars, cars) ||
                 const DeepCollectionEquality().equals(other.cars, cars)) &&
             (identical(other.cities, cities) ||
-                const DeepCollectionEquality().equals(other.cities, cities)) &&
-            (identical(other.orders, orders) ||
-                const DeepCollectionEquality().equals(other.orders, orders)));
+                const DeepCollectionEquality().equals(other.cities, cities)));
   }
 
   @override
@@ -161,29 +181,25 @@ class _$_OrdersState implements _OrdersState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(customers) ^
       const DeepCollectionEquality().hash(cars) ^
-      const DeepCollectionEquality().hash(cities) ^
-      const DeepCollectionEquality().hash(orders);
+      const DeepCollectionEquality().hash(cities);
 
   @override
-  _$OrdersStateCopyWith<_OrdersState> get copyWith =>
-      __$OrdersStateCopyWithImpl<_OrdersState>(this, _$identity);
+  _$DataCopyWith<_Data> get copyWith =>
+      __$DataCopyWithImpl<_Data>(this, _$identity);
 }
 
-abstract class _OrdersState implements OrdersState {
-  const factory _OrdersState(
-      {@required List<Request<Customer>> customers,
-      @required List<Request<Car>> cars,
-      @required List<Request<City>> cities,
-      @required List<Request<Order>> orders}) = _$_OrdersState;
+abstract class _Data implements OrdersState {
+  const factory _Data(
+      {@required Request<Customers> customers,
+      @required Request<Cars> cars,
+      @required Request<Cities> cities}) = _$_Data;
 
   @override
-  List<Request<Customer>> get customers;
+  Request<Customers> get customers;
   @override
-  List<Request<Car>> get cars;
+  Request<Cars> get cars;
   @override
-  List<Request<City>> get cities;
+  Request<Cities> get cities;
   @override
-  List<Request<Order>> get orders;
-  @override
-  _$OrdersStateCopyWith<_OrdersState> get copyWith;
+  _$DataCopyWith<_Data> get copyWith;
 }
