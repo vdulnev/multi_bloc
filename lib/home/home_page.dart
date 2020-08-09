@@ -8,6 +8,7 @@ import 'package:multibloc/app/app_event.dart';
 import '../routes.dart';
 import 'home_bloc.dart';
 import 'home_state.dart';
+import '../widget_ext.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key key}) : super(key: key);
@@ -29,22 +30,6 @@ class HomePage extends StatelessWidget {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Text('isDarkTheme'),
-                            Checkbox(
-                              value:
-                                  appState.theme.brightness == Brightness.dark,
-                              onChanged: (value) =>
-                                  BlocProvider.of<AppBloc>(context)
-                                      .add(AppEvent.setTheme(isDark: value)),
-                            ),
-                          ],
-                          mainAxisAlignment: MainAxisAlignment.center,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
                         child: RaisedButton(
                           child: Text(
                             'Orders',
@@ -61,7 +46,28 @@ class HomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                ) // This trailing comma makes auto-formatting nicer for build methods.
+                ), // This trailing comma makes auto-formatting nicer for build methods.
+                drawer: Drawer(
+                  child: ListView(
+                    padding: EdgeInsets.zero,
+                    children: [
+                      DrawerHeader(child: Text('Settings')),
+                      Row(
+                          children: [
+                            Text('isDarkTheme'),
+                            Checkbox(
+                              value:
+                                  appState.theme.brightness == Brightness.dark,
+                              onChanged: (value) =>
+                                  BlocProvider.of<AppBloc>(context)
+                                      .add(AppEvent.setTheme(isDark: value)),
+                            ),
+                          ],
+                          mainAxisAlignment: MainAxisAlignment.start,
+                        ).padding(EdgeInsets.only(left: 8.0)),
+                    ],
+                  ),
+                ),
                 );
           }),
     );
