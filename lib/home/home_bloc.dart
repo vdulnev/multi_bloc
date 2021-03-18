@@ -9,14 +9,15 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc(this._title);
 
   @override
-  HomeState get initialState => HomeState(title: _title);
+  HomeState get initialState => HomeState(title: _title, page: 0);
 
   @override
   void onEvent(HomeEvent event) {
     super.onEvent(event);
     event.when(
-        transfersPressed: null,
-        paymentsPressed: null
+        transfersPressed: () => {},
+        paymentsPressed: () => {},
+        pageSelected: (_) => {},
     );
   }
 
@@ -24,7 +25,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   Stream<HomeState> mapEventToState(HomeEvent event) async* {
     yield event.when(
         transfersPressed: () => state,
-        paymentsPressed: () => state
+        paymentsPressed: () => state,
+        pageSelected: (page) => state.copyWith(page: page),
     );
   }
 

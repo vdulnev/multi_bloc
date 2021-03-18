@@ -21,6 +21,13 @@ class _$HomeEventTearOff {
   PaymentsPressed paymentsPressed() {
     return const PaymentsPressed();
   }
+
+// ignore: unused_element
+  PageSelected pageSelected(int pageIndex) {
+    return PageSelected(
+      pageIndex,
+    );
+  }
 }
 
 // ignore: unused_element
@@ -31,22 +38,26 @@ mixin _$HomeEvent {
   Result when<Result extends Object>({
     @required Result transfersPressed(),
     @required Result paymentsPressed(),
+    @required Result pageSelected(int pageIndex),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result transfersPressed(),
     Result paymentsPressed(),
+    Result pageSelected(int pageIndex),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result transfersPressed(TransfersPressed value),
     @required Result paymentsPressed(PaymentsPressed value),
+    @required Result pageSelected(PageSelected value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result transfersPressed(TransfersPressed value),
     Result paymentsPressed(PaymentsPressed value),
+    Result pageSelected(PageSelected value),
     @required Result orElse(),
   });
 }
@@ -80,12 +91,20 @@ class _$TransfersPressedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
   TransfersPressed get _value => super._value as TransfersPressed;
 }
 
-class _$TransfersPressed implements TransfersPressed {
+class _$TransfersPressed
+    with DiagnosticableTreeMixin
+    implements TransfersPressed {
   const _$TransfersPressed();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'HomeEvent.transfersPressed()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'HomeEvent.transfersPressed'));
   }
 
   @override
@@ -101,9 +120,11 @@ class _$TransfersPressed implements TransfersPressed {
   Result when<Result extends Object>({
     @required Result transfersPressed(),
     @required Result paymentsPressed(),
+    @required Result pageSelected(int pageIndex),
   }) {
     assert(transfersPressed != null);
     assert(paymentsPressed != null);
+    assert(pageSelected != null);
     return transfersPressed();
   }
 
@@ -112,6 +133,7 @@ class _$TransfersPressed implements TransfersPressed {
   Result maybeWhen<Result extends Object>({
     Result transfersPressed(),
     Result paymentsPressed(),
+    Result pageSelected(int pageIndex),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -126,9 +148,11 @@ class _$TransfersPressed implements TransfersPressed {
   Result map<Result extends Object>({
     @required Result transfersPressed(TransfersPressed value),
     @required Result paymentsPressed(PaymentsPressed value),
+    @required Result pageSelected(PageSelected value),
   }) {
     assert(transfersPressed != null);
     assert(paymentsPressed != null);
+    assert(pageSelected != null);
     return transfersPressed(this);
   }
 
@@ -137,6 +161,7 @@ class _$TransfersPressed implements TransfersPressed {
   Result maybeMap<Result extends Object>({
     Result transfersPressed(TransfersPressed value),
     Result paymentsPressed(PaymentsPressed value),
+    Result pageSelected(PageSelected value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -167,12 +192,20 @@ class _$PaymentsPressedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
   PaymentsPressed get _value => super._value as PaymentsPressed;
 }
 
-class _$PaymentsPressed implements PaymentsPressed {
+class _$PaymentsPressed
+    with DiagnosticableTreeMixin
+    implements PaymentsPressed {
   const _$PaymentsPressed();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'HomeEvent.paymentsPressed()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'HomeEvent.paymentsPressed'));
   }
 
   @override
@@ -188,9 +221,11 @@ class _$PaymentsPressed implements PaymentsPressed {
   Result when<Result extends Object>({
     @required Result transfersPressed(),
     @required Result paymentsPressed(),
+    @required Result pageSelected(int pageIndex),
   }) {
     assert(transfersPressed != null);
     assert(paymentsPressed != null);
+    assert(pageSelected != null);
     return paymentsPressed();
   }
 
@@ -199,6 +234,7 @@ class _$PaymentsPressed implements PaymentsPressed {
   Result maybeWhen<Result extends Object>({
     Result transfersPressed(),
     Result paymentsPressed(),
+    Result pageSelected(int pageIndex),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -213,9 +249,11 @@ class _$PaymentsPressed implements PaymentsPressed {
   Result map<Result extends Object>({
     @required Result transfersPressed(TransfersPressed value),
     @required Result paymentsPressed(PaymentsPressed value),
+    @required Result pageSelected(PageSelected value),
   }) {
     assert(transfersPressed != null);
     assert(paymentsPressed != null);
+    assert(pageSelected != null);
     return paymentsPressed(this);
   }
 
@@ -224,6 +262,7 @@ class _$PaymentsPressed implements PaymentsPressed {
   Result maybeMap<Result extends Object>({
     Result transfersPressed(TransfersPressed value),
     Result paymentsPressed(PaymentsPressed value),
+    Result pageSelected(PageSelected value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -236,4 +275,130 @@ class _$PaymentsPressed implements PaymentsPressed {
 
 abstract class PaymentsPressed implements HomeEvent {
   const factory PaymentsPressed() = _$PaymentsPressed;
+}
+
+abstract class $PageSelectedCopyWith<$Res> {
+  factory $PageSelectedCopyWith(
+          PageSelected value, $Res Function(PageSelected) then) =
+      _$PageSelectedCopyWithImpl<$Res>;
+  $Res call({int pageIndex});
+}
+
+class _$PageSelectedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
+    implements $PageSelectedCopyWith<$Res> {
+  _$PageSelectedCopyWithImpl(
+      PageSelected _value, $Res Function(PageSelected) _then)
+      : super(_value, (v) => _then(v as PageSelected));
+
+  @override
+  PageSelected get _value => super._value as PageSelected;
+
+  @override
+  $Res call({
+    Object pageIndex = freezed,
+  }) {
+    return _then(PageSelected(
+      pageIndex == freezed ? _value.pageIndex : pageIndex as int,
+    ));
+  }
+}
+
+class _$PageSelected with DiagnosticableTreeMixin implements PageSelected {
+  const _$PageSelected(this.pageIndex) : assert(pageIndex != null);
+
+  @override
+  final int pageIndex;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'HomeEvent.pageSelected(pageIndex: $pageIndex)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'HomeEvent.pageSelected'))
+      ..add(DiagnosticsProperty('pageIndex', pageIndex));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is PageSelected &&
+            (identical(other.pageIndex, pageIndex) ||
+                const DeepCollectionEquality()
+                    .equals(other.pageIndex, pageIndex)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(pageIndex);
+
+  @override
+  $PageSelectedCopyWith<PageSelected> get copyWith =>
+      _$PageSelectedCopyWithImpl<PageSelected>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result transfersPressed(),
+    @required Result paymentsPressed(),
+    @required Result pageSelected(int pageIndex),
+  }) {
+    assert(transfersPressed != null);
+    assert(paymentsPressed != null);
+    assert(pageSelected != null);
+    return pageSelected(pageIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result transfersPressed(),
+    Result paymentsPressed(),
+    Result pageSelected(int pageIndex),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (pageSelected != null) {
+      return pageSelected(pageIndex);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result transfersPressed(TransfersPressed value),
+    @required Result paymentsPressed(PaymentsPressed value),
+    @required Result pageSelected(PageSelected value),
+  }) {
+    assert(transfersPressed != null);
+    assert(paymentsPressed != null);
+    assert(pageSelected != null);
+    return pageSelected(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result transfersPressed(TransfersPressed value),
+    Result paymentsPressed(PaymentsPressed value),
+    Result pageSelected(PageSelected value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (pageSelected != null) {
+      return pageSelected(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PageSelected implements HomeEvent {
+  const factory PageSelected(int pageIndex) = _$PageSelected;
+
+  int get pageIndex;
+  $PageSelectedCopyWith<PageSelected> get copyWith;
 }

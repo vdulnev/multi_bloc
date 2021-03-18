@@ -1,13 +1,15 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:multibloc/orders/cities/cities_bloc.dart';
 
+import 'orders/cities/cities_page.dart';
 import 'home/home_bloc.dart';
 import 'home/home_page.dart';
 import 'orders/orders_bloc.dart';
 import 'orders/orders_list/orders_list_bloc.dart';
 import 'orders/orders_list/orders_list_page.dart';
 
-enum AppRoute {HOME, ORDERS}
+enum AppRoute {HOME, ORDERS, CITIES}
 
 typedef PageCreator = Widget Function({Object arguments});
 
@@ -33,6 +35,18 @@ PageCreator page(AppRoute route, {Object arguments}) {
           ),
         ],
         child: OrdersListPage(),
+      );
+    case AppRoute.CITIES:
+      return ({arguments}) => MultiBlocProvider(
+        providers: [
+          BlocProvider<OrdersBloc>(
+            create: (context) => OrdersBloc(),
+          ),
+          BlocProvider<CitiesBloc>(
+            create: (context) => CitiesBloc(),
+          ),
+        ],
+        child: CitiesPage(),
       );
   }
   return null;

@@ -1,4 +1,6 @@
 analyzer:
+  errors:
+    missing_enum_constant_in_switch: error
   exclude:
     - lib/**.g.dart
     - lib/**.freezed.dart

@@ -31,26 +31,19 @@ class OrdersListPage extends StatelessWidget {
   }
 
   Widget _onLoading(String title) {
-    return _page(title, _onLoadingBody());
+    return _onLoadingBody();
   }
 
   Widget _onData(String title, Customers customers, Cars cars, Cities cities,
       Orders orders) {
-    return _page(title, _onDataBody(customers, cars, cities, orders));
+    return _onDataBody(customers, cars, cities, orders);
   }
 
   Widget _onError(String title) {
-    return _page(title, _onErrorBody());
+    return _onErrorBody();
   }
 
-  Scaffold _page(String title, Widget body) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: body,
-    );
-  }
+  
 
   Widget _onLoadingBody() {
     return Text('Loading');

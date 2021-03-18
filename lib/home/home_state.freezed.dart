@@ -13,9 +13,12 @@ class _$HomeStateTearOff {
   const _$HomeStateTearOff();
 
 // ignore: unused_element
-  _HomeState call({String title}) {
+  _HomeState call(
+      {@required String title, String subTitle, @required int page}) {
     return _HomeState(
       title: title,
+      subTitle: subTitle,
+      page: page,
     );
   }
 }
@@ -25,6 +28,8 @@ const $HomeState = _$HomeStateTearOff();
 
 mixin _$HomeState {
   String get title;
+  String get subTitle;
+  int get page;
 
   $HomeStateCopyWith<HomeState> get copyWith;
 }
@@ -32,7 +37,7 @@ mixin _$HomeState {
 abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res>;
-  $Res call({String title});
+  $Res call({String title, String subTitle, int page});
 }
 
 class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
@@ -45,9 +50,13 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
   @override
   $Res call({
     Object title = freezed,
+    Object subTitle = freezed,
+    Object page = freezed,
   }) {
     return _then(_value.copyWith(
       title: title == freezed ? _value.title : title as String,
+      subTitle: subTitle == freezed ? _value.subTitle : subTitle as String,
+      page: page == freezed ? _value.page : page as int,
     ));
   }
 }
@@ -57,7 +66,7 @@ abstract class _$HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
           _HomeState value, $Res Function(_HomeState) then) =
       __$HomeStateCopyWithImpl<$Res>;
   @override
-  $Res call({String title});
+  $Res call({String title, String subTitle, int page});
 }
 
 class __$HomeStateCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
@@ -71,22 +80,32 @@ class __$HomeStateCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object title = freezed,
+    Object subTitle = freezed,
+    Object page = freezed,
   }) {
     return _then(_HomeState(
       title: title == freezed ? _value.title : title as String,
+      subTitle: subTitle == freezed ? _value.subTitle : subTitle as String,
+      page: page == freezed ? _value.page : page as int,
     ));
   }
 }
 
 class _$_HomeState implements _HomeState {
-  _$_HomeState({this.title});
+  _$_HomeState({@required this.title, this.subTitle, @required this.page})
+      : assert(title != null),
+        assert(page != null);
 
   @override
   final String title;
+  @override
+  final String subTitle;
+  @override
+  final int page;
 
   @override
   String toString() {
-    return 'HomeState(title: $title)';
+    return 'HomeState(title: $title, subTitle: $subTitle, page: $page)';
   }
 
   @override
@@ -94,12 +113,20 @@ class _$_HomeState implements _HomeState {
     return identical(this, other) ||
         (other is _HomeState &&
             (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)));
+                const DeepCollectionEquality().equals(other.title, title)) &&
+            (identical(other.subTitle, subTitle) ||
+                const DeepCollectionEquality()
+                    .equals(other.subTitle, subTitle)) &&
+            (identical(other.page, page) ||
+                const DeepCollectionEquality().equals(other.page, page)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(title);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(title) ^
+      const DeepCollectionEquality().hash(subTitle) ^
+      const DeepCollectionEquality().hash(page);
 
   @override
   _$HomeStateCopyWith<_HomeState> get copyWith =>
@@ -107,10 +134,17 @@ class _$_HomeState implements _HomeState {
 }
 
 abstract class _HomeState implements HomeState {
-  factory _HomeState({String title}) = _$_HomeState;
+  factory _HomeState(
+      {@required String title,
+      String subTitle,
+      @required int page}) = _$_HomeState;
 
   @override
   String get title;
+  @override
+  String get subTitle;
+  @override
+  int get page;
   @override
   _$HomeStateCopyWith<_HomeState> get copyWith;
 }
