@@ -9,13 +9,10 @@ import '../../repository.dart';
 class OrdersListBloc extends Bloc<OrdersListEvent, OrdersListState> {
   final repository = OrdersRepository();
 
-  OrdersListBloc(){
+  OrdersListBloc()
+      : super(OrdersListState(title: 'Orders list', orders: Request.empty())) {
     _loadData();
   }
-
-  @override
-  OrdersListState get initialState => OrdersListState(title: 'Orders list',
-  orders: Request.empty());
 
   @override
   Stream<OrdersListState> mapEventToState(OrdersListEvent event) async* {

@@ -9,15 +9,9 @@ import 'package:multibloc/repository.dart';
 class OrdersBloc extends Bloc<OrdersEvent, OrdersState> {
   final repository = OrdersRepository();
 
-  OrdersBloc() {
+  OrdersBloc(OrdersState initialState) : super(initialState) {
     loadData();
   }
-
-  @override
-  OrdersState get initialState => OrdersState(
-      customers: Request.empty(),
-      cars: Request.empty(),
-      cities: Request.empty());
 
   @override
   Stream<OrdersState> mapEventToState(OrdersEvent event) async* {

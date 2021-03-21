@@ -4,12 +4,8 @@ import 'home_event.dart';
 import 'home_state.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
-  final String _title;
 
-  HomeBloc(this._title);
-
-  @override
-  HomeState get initialState => HomeState(title: _title, page: 0);
+  HomeBloc(HomeState initialState) : super(initialState);
 
   @override
   void onEvent(HomeEvent event) {

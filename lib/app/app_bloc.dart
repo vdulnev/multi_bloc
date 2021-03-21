@@ -5,9 +5,8 @@ import 'package:multibloc/app/app_event.dart';
 import 'package:multibloc/app/app_state.dart';
 
 class AppBloc extends Bloc<AppEvent, AppState> {
-  @override
-  AppState get initialState => AppState(theme: ThemeData.light());
-
+  AppBloc(AppState initialState) : super(initialState);
+  
   @override
   Stream<AppState> mapEventToState(AppEvent event) async* {
     yield event.when(

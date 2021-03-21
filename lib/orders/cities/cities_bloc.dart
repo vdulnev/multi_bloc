@@ -5,8 +5,7 @@ import 'cities_state.dart';
 
 
 class CitiesBloc extends Bloc<CitiesEvent, CitiesState>{
-  @override
-  CitiesState get initialState => CitiesState(title: 'Cities');
+  CitiesBloc(CitiesState initialState) : super(initialState);
 
   @override
   Stream<CitiesState> mapEventToState(CitiesEvent event) async*{

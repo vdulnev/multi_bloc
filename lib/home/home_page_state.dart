@@ -4,11 +4,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:multibloc/app/app_bloc.dart';
 import 'package:multibloc/app/app_bloc_consumer.dart';
 import 'package:multibloc/app/app_event.dart';
+import 'package:multibloc/generics/request.dart';
 import 'package:multibloc/orders/cities/cities_bloc.dart';
 import 'package:multibloc/orders/cities/cities_page.dart';
+import 'package:multibloc/orders/cities/cities_state.dart';
 import 'package:multibloc/orders/orders_bloc.dart';
 import 'package:multibloc/orders/orders_list/orders_list_bloc.dart';
 import 'package:multibloc/orders/orders_list/orders_list_page.dart';
+import 'package:multibloc/orders/orders_state.dart';
 import '../widget_ext.dart';
 
 import 'home_bloc.dart';
@@ -22,9 +25,12 @@ class HomePageState extends State<StatefulWidget> {
   var _pages;
 
   HomePageState()
-      : _ordersBloc = OrdersBloc(),
+      : _ordersBloc = OrdersBloc(OrdersState(
+            customers: Request.empty(),
+            cars: Request.empty(),
+            cities: Request.empty())),
         _ordersListBloc = OrdersListBloc(),
-        _citiesBloc = CitiesBloc() {
+        _citiesBloc = CitiesBloc(CitiesState(title: 'Cities')) {
     _pages = [
       MultiBlocProvider(
         providers: [
@@ -97,7 +103,7 @@ class HomePageState extends State<StatefulWidget> {
                   ),
                 ],
                 onTap: (index) =>
-                    context.bloc<HomeBloc>().add(HomeEvent.pageSelected(index)),
+                    context.read<HomeBloc>().add(HomeEvent.pageSelected(index)),
               ),
             );
           }),
@@ -120,7 +126,9 @@ class HomePageState extends State<StatefulWidget> {
     return Column(
       children: [
         Text(homeState.title),
-        (homeState.subTitle != null) ? Text(homeState.subTitle) : SizedBox.shrink()
+        (homeState.subTitle != null)
+            ? Text(homeState.subTitle)
+            : SizedBox.shrink()
       ],
     );
   }

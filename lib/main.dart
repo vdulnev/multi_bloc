@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<AppBloc>(
-      create: (context) => AppBloc(),
+      create: (context) => AppBloc(AppState(theme: ThemeData.light())),
       child: BlocBuilder<AppBloc, AppState>(
         builder: (context, state) => MaterialApp(
           title: 'Multi Bloc Demo',
