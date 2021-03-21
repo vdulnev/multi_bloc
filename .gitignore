@@ -1,0 +1,10 @@
+.packages
+pubspec.lock
+.dart_tool/*
+.idea/*
+android/*
+build/*
+web/*
+ios/*
+.metadata
+multi_bloc.iml
