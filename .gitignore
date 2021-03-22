@@ -8,3 +8,5 @@ web/*
 ios/*
 .metadata
 multi_bloc.iml
+/.history/lib/
+/*.iml

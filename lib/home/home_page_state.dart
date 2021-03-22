@@ -22,7 +22,7 @@ class HomePageState extends State<StatefulWidget> {
   final OrdersBloc _ordersBloc;
   final OrdersListBloc _ordersListBloc;
   final _citiesBloc;
-  var _pages;
+  late var _pages;
 
   HomePageState()
       : _ordersBloc = OrdersBloc(OrdersState(
@@ -82,7 +82,7 @@ class HomePageState extends State<StatefulWidget> {
                           value: appState.theme.brightness == Brightness.dark,
                           onChanged: (value) =>
                               BlocProvider.of<AppBloc>(context)
-                                  .add(AppEvent.setTheme(isDark: value)),
+                                  .add(AppEvent.setTheme(isDark: value!)),
                         ),
                       ],
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -110,7 +110,7 @@ class HomePageState extends State<StatefulWidget> {
     );
   }
 
-  Widget _page(int page) {
+  Widget? _page(int page) {
     return _pages[page];
   }
 
@@ -126,9 +126,7 @@ class HomePageState extends State<StatefulWidget> {
     return Column(
       children: [
         Text(homeState.title),
-        (homeState.subTitle != null)
-            ? Text(homeState.subTitle)
-            : SizedBox.shrink()
+        if (homeState.subTitle != null) Text(homeState.subTitle!) else SizedBox.shrink()
       ],
     );
   }

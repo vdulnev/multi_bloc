@@ -6,8 +6,8 @@ import '../models.dart';
 part 'orders_event.freezed.dart';
 
 @freezed
-abstract class OrdersEvent with _$OrdersEvent{
-  factory OrdersEvent.customers({@required Request<Customers> customers}) = _Customers;
-  factory OrdersEvent.cars({@required Request<Cars> cars}) = _Cars;
-  factory OrdersEvent.cities({@required Request<Cities> cities}) = _Cities;
+class OrdersEvent with _$OrdersEvent{
+  factory OrdersEvent.customers({required Request<Customers> customers}) = _Customers;
+  factory OrdersEvent.cars({required Request<Cars> cars}) = _Cars;
+  factory OrdersEvent.cities({required Request<Cities> cities}) = _Cities;
 }

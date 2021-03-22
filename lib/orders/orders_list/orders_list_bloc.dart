@@ -16,7 +16,7 @@ class OrdersListBloc extends Bloc<OrdersListEvent, OrdersListState> {
 
   @override
   Stream<OrdersListState> mapEventToState(OrdersListEvent event) async* {
-    yield event.when(orders: (orders) => state.copyWith(orders: orders));
+    yield event.when(orders: ((orders) => state.copyWith(orders: orders)));
   }
 
   void _loadData() {

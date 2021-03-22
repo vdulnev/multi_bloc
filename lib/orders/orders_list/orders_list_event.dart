@@ -6,7 +6,7 @@ import '../../models.dart';
 part 'orders_list_event.freezed.dart';
 
 @freezed
-abstract class OrdersListEvent with _$OrdersListEvent{
+class OrdersListEvent with _$OrdersListEvent{
   // ignore: non_constant_identifier_names
-  factory OrdersListEvent.orders({@required Request<Orders> orders}) = _Orders;
+  factory OrdersListEvent.orders({required Request<Orders> orders}) = _Orders;
 }

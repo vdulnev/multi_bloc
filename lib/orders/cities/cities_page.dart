@@ -30,15 +30,15 @@ class CitiesPage extends StatelessWidget{
     );
   }
 
-  Widget _onLoading(String title) {
+  Widget _onLoading(String? title) {
     return Text('Loading');
   }
 
-  Widget _onData(String title, Cities cities) {
+  Widget _onData(String? title, Cities cities) {
     return Text('$cities');
   }
 
-  Widget _onError(String title) {
+  Widget _onError(String? title) {
     return Text('error');
   }
 }

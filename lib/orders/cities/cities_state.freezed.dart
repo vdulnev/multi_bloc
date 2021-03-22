@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'cities_state.dart';
 
@@ -9,26 +9,33 @@ part of 'cities_state.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$CitiesStateTearOff {
   const _$CitiesStateTearOff();
 
-// ignore: unused_element
-  _CitiesState call({@required String title}) {
+  _CitiesState call({required String title}) {
     return _CitiesState(
       title: title,
     );
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $CitiesState = _$CitiesStateTearOff();
 
+/// @nodoc
 mixin _$CitiesState {
-  String get title;
+  String get title => throw _privateConstructorUsedError;
 
-  $CitiesStateCopyWith<CitiesState> get copyWith;
+  @JsonKey(ignore: true)
+  $CitiesStateCopyWith<CitiesState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $CitiesStateCopyWith<$Res> {
   factory $CitiesStateCopyWith(
           CitiesState value, $Res Function(CitiesState) then) =
@@ -36,6 +43,7 @@ abstract class $CitiesStateCopyWith<$Res> {
   $Res call({String title});
 }
 
+/// @nodoc
 class _$CitiesStateCopyWithImpl<$Res> implements $CitiesStateCopyWith<$Res> {
   _$CitiesStateCopyWithImpl(this._value, this._then);
 
@@ -45,14 +53,18 @@ class _$CitiesStateCopyWithImpl<$Res> implements $CitiesStateCopyWith<$Res> {
 
   @override
   $Res call({
-    Object title = freezed,
+    Object? title = freezed,
   }) {
     return _then(_value.copyWith(
-      title: title == freezed ? _value.title : title as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$CitiesStateCopyWith<$Res>
     implements $CitiesStateCopyWith<$Res> {
   factory _$CitiesStateCopyWith(
@@ -62,6 +74,7 @@ abstract class _$CitiesStateCopyWith<$Res>
   $Res call({String title});
 }
 
+/// @nodoc
 class __$CitiesStateCopyWithImpl<$Res> extends _$CitiesStateCopyWithImpl<$Res>
     implements _$CitiesStateCopyWith<$Res> {
   __$CitiesStateCopyWithImpl(
@@ -73,16 +86,20 @@ class __$CitiesStateCopyWithImpl<$Res> extends _$CitiesStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object title = freezed,
+    Object? title = freezed,
   }) {
     return _then(_CitiesState(
-      title: title == freezed ? _value.title : title as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
 class _$_CitiesState implements _CitiesState {
-  _$_CitiesState({@required this.title}) : assert(title != null);
+  _$_CitiesState({required this.title});
 
   @override
   final String title;
@@ -104,16 +121,19 @@ class _$_CitiesState implements _CitiesState {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(title);
 
+  @JsonKey(ignore: true)
   @override
   _$CitiesStateCopyWith<_CitiesState> get copyWith =>
       __$CitiesStateCopyWithImpl<_CitiesState>(this, _$identity);
 }
 
 abstract class _CitiesState implements CitiesState {
-  factory _CitiesState({@required String title}) = _$_CitiesState;
+  factory _CitiesState({required String title}) = _$_CitiesState;
 
   @override
-  String get title;
+  String get title => throw _privateConstructorUsedError;
   @override
-  _$CitiesStateCopyWith<_CitiesState> get copyWith;
+  @JsonKey(ignore: true)
+  _$CitiesStateCopyWith<_CitiesState> get copyWith =>
+      throw _privateConstructorUsedError;
 }

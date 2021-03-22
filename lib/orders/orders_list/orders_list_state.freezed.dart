@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'orders_list_state.dart';
 
@@ -9,12 +9,15 @@ part of 'orders_list_state.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$OrdersListStateTearOff {
   const _$OrdersListStateTearOff();
 
-// ignore: unused_element
   _OrdersListState call(
-      {@required String title, @required Request<Orders> orders}) {
+      {required String title, required Request<Orders> orders}) {
     return _OrdersListState(
       title: title,
       orders: orders,
@@ -22,16 +25,20 @@ class _$OrdersListStateTearOff {
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $OrdersListState = _$OrdersListStateTearOff();
 
+/// @nodoc
 mixin _$OrdersListState {
-  String get title;
-  Request<Orders> get orders;
+  String get title => throw _privateConstructorUsedError;
+  Request<Orders> get orders => throw _privateConstructorUsedError;
 
-  $OrdersListStateCopyWith<OrdersListState> get copyWith;
+  @JsonKey(ignore: true)
+  $OrdersListStateCopyWith<OrdersListState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $OrdersListStateCopyWith<$Res> {
   factory $OrdersListStateCopyWith(
           OrdersListState value, $Res Function(OrdersListState) then) =
@@ -41,6 +48,7 @@ abstract class $OrdersListStateCopyWith<$Res> {
   $RequestCopyWith<Orders, $Res> get orders;
 }
 
+/// @nodoc
 class _$OrdersListStateCopyWithImpl<$Res>
     implements $OrdersListStateCopyWith<$Res> {
   _$OrdersListStateCopyWithImpl(this._value, this._then);
@@ -51,26 +59,30 @@ class _$OrdersListStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object title = freezed,
-    Object orders = freezed,
+    Object? title = freezed,
+    Object? orders = freezed,
   }) {
     return _then(_value.copyWith(
-      title: title == freezed ? _value.title : title as String,
-      orders: orders == freezed ? _value.orders : orders as Request<Orders>,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      orders: orders == freezed
+          ? _value.orders
+          : orders // ignore: cast_nullable_to_non_nullable
+              as Request<Orders>,
     ));
   }
 
   @override
   $RequestCopyWith<Orders, $Res> get orders {
-    if (_value.orders == null) {
-      return null;
-    }
     return $RequestCopyWith<Orders, $Res>(_value.orders, (value) {
       return _then(_value.copyWith(orders: value));
     });
   }
 }
 
+/// @nodoc
 abstract class _$OrdersListStateCopyWith<$Res>
     implements $OrdersListStateCopyWith<$Res> {
   factory _$OrdersListStateCopyWith(
@@ -83,6 +95,7 @@ abstract class _$OrdersListStateCopyWith<$Res>
   $RequestCopyWith<Orders, $Res> get orders;
 }
 
+/// @nodoc
 class __$OrdersListStateCopyWithImpl<$Res>
     extends _$OrdersListStateCopyWithImpl<$Res>
     implements _$OrdersListStateCopyWith<$Res> {
@@ -95,20 +108,25 @@ class __$OrdersListStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object title = freezed,
-    Object orders = freezed,
+    Object? title = freezed,
+    Object? orders = freezed,
   }) {
     return _then(_OrdersListState(
-      title: title == freezed ? _value.title : title as String,
-      orders: orders == freezed ? _value.orders : orders as Request<Orders>,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      orders: orders == freezed
+          ? _value.orders
+          : orders // ignore: cast_nullable_to_non_nullable
+              as Request<Orders>,
     ));
   }
 }
 
+/// @nodoc
 class _$_OrdersListState implements _OrdersListState {
-  _$_OrdersListState({@required this.title, @required this.orders})
-      : assert(title != null),
-        assert(orders != null);
+  _$_OrdersListState({required this.title, required this.orders});
 
   @override
   final String title;
@@ -136,6 +154,7 @@ class _$_OrdersListState implements _OrdersListState {
       const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(orders);
 
+  @JsonKey(ignore: true)
   @override
   _$OrdersListStateCopyWith<_OrdersListState> get copyWith =>
       __$OrdersListStateCopyWithImpl<_OrdersListState>(this, _$identity);
@@ -143,13 +162,15 @@ class _$_OrdersListState implements _OrdersListState {
 
 abstract class _OrdersListState implements OrdersListState {
   factory _OrdersListState(
-      {@required String title,
-      @required Request<Orders> orders}) = _$_OrdersListState;
+      {required String title,
+      required Request<Orders> orders}) = _$_OrdersListState;
 
   @override
-  String get title;
+  String get title => throw _privateConstructorUsedError;
   @override
-  Request<Orders> get orders;
+  Request<Orders> get orders => throw _privateConstructorUsedError;
   @override
-  _$OrdersListStateCopyWith<_OrdersListState> get copyWith;
+  @JsonKey(ignore: true)
+  _$OrdersListStateCopyWith<_OrdersListState> get copyWith =>
+      throw _privateConstructorUsedError;
 }

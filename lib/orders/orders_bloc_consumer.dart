@@ -8,15 +8,15 @@ import 'package:multibloc/orders/orders_state.dart';
 typedef OrdersBlocWidgetBuilder = Widget Function(BuildContext context, AppState appState, OrdersState ordersState);
 
 Widget ordersBlocConsumer({
-  BlocWidgetListener<AppState> appListener,
-  BlocWidgetListener<OrdersState> ordersListener,
-  OrdersBlocWidgetBuilder builder,
+  required BlocWidgetListener<AppState> appListener,
+  BlocWidgetListener<OrdersState>? ordersListener,
+  OrdersBlocWidgetBuilder? builder,
 }) {
   return appBlocConsumer(
     listener: appListener,
     builder: (context, appState) => BlocConsumer<OrdersBloc, OrdersState>(
-      listener: ordersListener,
-      builder: (context, ordersSate) => builder(context, appState, ordersSate),
+      listener: ordersListener!,
+      builder: (context, ordersSate) => builder!(context, appState, ordersSate),
     )
   );
 }

@@ -6,8 +6,8 @@ import '../../generics/request.dart';
 part 'orders_list_state.freezed.dart';
 
 @freezed
-abstract class OrdersListState with _$OrdersListState {
+class OrdersListState with _$OrdersListState {
   factory OrdersListState(
-      {@required String title,
-      @required Request<Orders> orders}) = _OrdersListState;
+      {required String title,
+      required Request<Orders> orders}) = _OrdersListState;
 }

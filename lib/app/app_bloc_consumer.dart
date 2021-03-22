@@ -5,8 +5,8 @@ import 'app_bloc.dart';
 import 'app_state.dart';
 
 Widget appBlocConsumer({
-  BlocWidgetListener<AppState> listener,
-  BlocWidgetBuilder<AppState> builder,
+  required BlocWidgetListener<AppState> listener,
+  required BlocWidgetBuilder<AppState> builder,
 }) {
   return BlocConsumer<AppBloc, AppState>(
   listener: listener,

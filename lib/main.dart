@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         builder: (context, state) => MaterialApp(
           title: 'Multi Bloc Demo',
           theme: state.theme,
-          home: page(AppRoute.HOME)(),
+          home: page(AppRoute.HOME)!(),
         ),
       ),
     );

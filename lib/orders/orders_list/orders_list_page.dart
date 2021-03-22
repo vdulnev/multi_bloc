@@ -30,16 +30,16 @@ class OrdersListPage extends StatelessWidget {
         error: (title) => _onError(title));
   }
 
-  Widget _onLoading(String title) {
+  Widget _onLoading(String? title) {
     return _onLoadingBody();
   }
 
-  Widget _onData(String title, Customers customers, Cars cars, Cities cities,
+  Widget _onData(String? title, Customers customers, Cars cars, Cities cities,
       Orders orders) {
     return _onDataBody(customers, cars, cities, orders);
   }
 
-  Widget _onError(String title) {
+  Widget _onError(String? title) {
     return _onErrorBody();
   }
 

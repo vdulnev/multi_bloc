@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'app_event.dart';
 
@@ -9,55 +9,64 @@ part of 'app_event.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$AppEventTearOff {
   const _$AppEventTearOff();
 
-// ignore: unused_element
-  SetTheme setTheme({@required bool isDark}) {
+  SetTheme setTheme({required bool isDark}) {
     return SetTheme(
       isDark: isDark,
     );
   }
 
-// ignore: unused_element
   DoNothing nothing() {
     return const DoNothing();
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $AppEvent = _$AppEventTearOff();
 
+/// @nodoc
 mixin _$AppEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result setTheme(bool isDark),
-    @required Result nothing(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool isDark) setTheme,
+    required TResult Function() nothing,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result setTheme(bool isDark),
-    Result nothing(),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool isDark)? setTheme,
+    TResult Function()? nothing,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result setTheme(SetTheme value),
-    @required Result nothing(DoNothing value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(SetTheme value) setTheme,
+    required TResult Function(DoNothing value) nothing,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result setTheme(SetTheme value),
-    Result nothing(DoNothing value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SetTheme value)? setTheme,
+    TResult Function(DoNothing value)? nothing,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $AppEventCopyWith<$Res> {
   factory $AppEventCopyWith(AppEvent value, $Res Function(AppEvent) then) =
       _$AppEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AppEventCopyWithImpl<$Res> implements $AppEventCopyWith<$Res> {
   _$AppEventCopyWithImpl(this._value, this._then);
 
@@ -66,12 +75,14 @@ class _$AppEventCopyWithImpl<$Res> implements $AppEventCopyWith<$Res> {
   final $Res Function(AppEvent) _then;
 }
 
+/// @nodoc
 abstract class $SetThemeCopyWith<$Res> {
   factory $SetThemeCopyWith(SetTheme value, $Res Function(SetTheme) then) =
       _$SetThemeCopyWithImpl<$Res>;
   $Res call({bool isDark});
 }
 
+/// @nodoc
 class _$SetThemeCopyWithImpl<$Res> extends _$AppEventCopyWithImpl<$Res>
     implements $SetThemeCopyWith<$Res> {
   _$SetThemeCopyWithImpl(SetTheme _value, $Res Function(SetTheme) _then)
@@ -82,16 +93,20 @@ class _$SetThemeCopyWithImpl<$Res> extends _$AppEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object isDark = freezed,
+    Object? isDark = freezed,
   }) {
     return _then(SetTheme(
-      isDark: isDark == freezed ? _value.isDark : isDark as bool,
+      isDark: isDark == freezed
+          ? _value.isDark
+          : isDark // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
 
+/// @nodoc
 class _$SetTheme implements SetTheme {
-  const _$SetTheme({@required this.isDark}) : assert(isDark != null);
+  const _$SetTheme({required this.isDark});
 
   @override
   final bool isDark;
@@ -113,29 +128,27 @@ class _$SetTheme implements SetTheme {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(isDark);
 
+  @JsonKey(ignore: true)
   @override
   $SetThemeCopyWith<SetTheme> get copyWith =>
       _$SetThemeCopyWithImpl<SetTheme>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result setTheme(bool isDark),
-    @required Result nothing(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool isDark) setTheme,
+    required TResult Function() nothing,
   }) {
-    assert(setTheme != null);
-    assert(nothing != null);
     return setTheme(isDark);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result setTheme(bool isDark),
-    Result nothing(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool isDark)? setTheme,
+    TResult Function()? nothing,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (setTheme != null) {
       return setTheme(isDark);
     }
@@ -144,23 +157,20 @@ class _$SetTheme implements SetTheme {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result setTheme(SetTheme value),
-    @required Result nothing(DoNothing value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(SetTheme value) setTheme,
+    required TResult Function(DoNothing value) nothing,
   }) {
-    assert(setTheme != null);
-    assert(nothing != null);
     return setTheme(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result setTheme(SetTheme value),
-    Result nothing(DoNothing value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SetTheme value)? setTheme,
+    TResult Function(DoNothing value)? nothing,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (setTheme != null) {
       return setTheme(this);
     }
@@ -169,17 +179,21 @@ class _$SetTheme implements SetTheme {
 }
 
 abstract class SetTheme implements AppEvent {
-  const factory SetTheme({@required bool isDark}) = _$SetTheme;
+  const factory SetTheme({required bool isDark}) = _$SetTheme;
 
-  bool get isDark;
-  $SetThemeCopyWith<SetTheme> get copyWith;
+  bool get isDark => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SetThemeCopyWith<SetTheme> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $DoNothingCopyWith<$Res> {
   factory $DoNothingCopyWith(DoNothing value, $Res Function(DoNothing) then) =
       _$DoNothingCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$DoNothingCopyWithImpl<$Res> extends _$AppEventCopyWithImpl<$Res>
     implements $DoNothingCopyWith<$Res> {
   _$DoNothingCopyWithImpl(DoNothing _value, $Res Function(DoNothing) _then)
@@ -189,6 +203,7 @@ class _$DoNothingCopyWithImpl<$Res> extends _$AppEventCopyWithImpl<$Res>
   DoNothing get _value => super._value as DoNothing;
 }
 
+/// @nodoc
 class _$DoNothing implements DoNothing {
   const _$DoNothing();
 
@@ -207,23 +222,20 @@ class _$DoNothing implements DoNothing {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result setTheme(bool isDark),
-    @required Result nothing(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool isDark) setTheme,
+    required TResult Function() nothing,
   }) {
-    assert(setTheme != null);
-    assert(nothing != null);
     return nothing();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result setTheme(bool isDark),
-    Result nothing(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool isDark)? setTheme,
+    TResult Function()? nothing,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (nothing != null) {
       return nothing();
     }
@@ -232,23 +244,20 @@ class _$DoNothing implements DoNothing {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result setTheme(SetTheme value),
-    @required Result nothing(DoNothing value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(SetTheme value) setTheme,
+    required TResult Function(DoNothing value) nothing,
   }) {
-    assert(setTheme != null);
-    assert(nothing != null);
     return nothing(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result setTheme(SetTheme value),
-    Result nothing(DoNothing value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SetTheme value)? setTheme,
+    TResult Function(DoNothing value)? nothing,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (nothing != null) {
       return nothing(this);
     }

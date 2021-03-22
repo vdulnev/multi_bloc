@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'home_event.dart';
 
@@ -9,20 +9,21 @@ part of 'home_event.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$HomeEventTearOff {
   const _$HomeEventTearOff();
 
-// ignore: unused_element
   TransfersPressed transfersPressed() {
     return const TransfersPressed();
   }
 
-// ignore: unused_element
   PaymentsPressed paymentsPressed() {
     return const PaymentsPressed();
   }
 
-// ignore: unused_element
   PageSelected pageSelected(int pageIndex) {
     return PageSelected(
       pageIndex,
@@ -30,43 +31,50 @@ class _$HomeEventTearOff {
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $HomeEvent = _$HomeEventTearOff();
 
+/// @nodoc
 mixin _$HomeEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result transfersPressed(),
-    @required Result paymentsPressed(),
-    @required Result pageSelected(int pageIndex),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() transfersPressed,
+    required TResult Function() paymentsPressed,
+    required TResult Function(int pageIndex) pageSelected,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result transfersPressed(),
-    Result paymentsPressed(),
-    Result pageSelected(int pageIndex),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? transfersPressed,
+    TResult Function()? paymentsPressed,
+    TResult Function(int pageIndex)? pageSelected,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result transfersPressed(TransfersPressed value),
-    @required Result paymentsPressed(PaymentsPressed value),
-    @required Result pageSelected(PageSelected value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(TransfersPressed value) transfersPressed,
+    required TResult Function(PaymentsPressed value) paymentsPressed,
+    required TResult Function(PageSelected value) pageSelected,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result transfersPressed(TransfersPressed value),
-    Result paymentsPressed(PaymentsPressed value),
-    Result pageSelected(PageSelected value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TransfersPressed value)? transfersPressed,
+    TResult Function(PaymentsPressed value)? paymentsPressed,
+    TResult Function(PageSelected value)? pageSelected,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $HomeEventCopyWith<$Res> {
   factory $HomeEventCopyWith(HomeEvent value, $Res Function(HomeEvent) then) =
       _$HomeEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$HomeEventCopyWithImpl<$Res> implements $HomeEventCopyWith<$Res> {
   _$HomeEventCopyWithImpl(this._value, this._then);
 
@@ -75,12 +83,14 @@ class _$HomeEventCopyWithImpl<$Res> implements $HomeEventCopyWith<$Res> {
   final $Res Function(HomeEvent) _then;
 }
 
+/// @nodoc
 abstract class $TransfersPressedCopyWith<$Res> {
   factory $TransfersPressedCopyWith(
           TransfersPressed value, $Res Function(TransfersPressed) then) =
       _$TransfersPressedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$TransfersPressedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
     implements $TransfersPressedCopyWith<$Res> {
   _$TransfersPressedCopyWithImpl(
@@ -91,6 +101,7 @@ class _$TransfersPressedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
   TransfersPressed get _value => super._value as TransfersPressed;
 }
 
+/// @nodoc
 class _$TransfersPressed
     with DiagnosticableTreeMixin
     implements TransfersPressed {
@@ -117,26 +128,22 @@ class _$TransfersPressed
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result transfersPressed(),
-    @required Result paymentsPressed(),
-    @required Result pageSelected(int pageIndex),
+  TResult when<TResult extends Object?>({
+    required TResult Function() transfersPressed,
+    required TResult Function() paymentsPressed,
+    required TResult Function(int pageIndex) pageSelected,
   }) {
-    assert(transfersPressed != null);
-    assert(paymentsPressed != null);
-    assert(pageSelected != null);
     return transfersPressed();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result transfersPressed(),
-    Result paymentsPressed(),
-    Result pageSelected(int pageIndex),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? transfersPressed,
+    TResult Function()? paymentsPressed,
+    TResult Function(int pageIndex)? pageSelected,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (transfersPressed != null) {
       return transfersPressed();
     }
@@ -145,26 +152,22 @@ class _$TransfersPressed
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result transfersPressed(TransfersPressed value),
-    @required Result paymentsPressed(PaymentsPressed value),
-    @required Result pageSelected(PageSelected value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(TransfersPressed value) transfersPressed,
+    required TResult Function(PaymentsPressed value) paymentsPressed,
+    required TResult Function(PageSelected value) pageSelected,
   }) {
-    assert(transfersPressed != null);
-    assert(paymentsPressed != null);
-    assert(pageSelected != null);
     return transfersPressed(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result transfersPressed(TransfersPressed value),
-    Result paymentsPressed(PaymentsPressed value),
-    Result pageSelected(PageSelected value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TransfersPressed value)? transfersPressed,
+    TResult Function(PaymentsPressed value)? paymentsPressed,
+    TResult Function(PageSelected value)? pageSelected,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (transfersPressed != null) {
       return transfersPressed(this);
     }
@@ -176,12 +179,14 @@ abstract class TransfersPressed implements HomeEvent {
   const factory TransfersPressed() = _$TransfersPressed;
 }
 
+/// @nodoc
 abstract class $PaymentsPressedCopyWith<$Res> {
   factory $PaymentsPressedCopyWith(
           PaymentsPressed value, $Res Function(PaymentsPressed) then) =
       _$PaymentsPressedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$PaymentsPressedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
     implements $PaymentsPressedCopyWith<$Res> {
   _$PaymentsPressedCopyWithImpl(
@@ -192,6 +197,7 @@ class _$PaymentsPressedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
   PaymentsPressed get _value => super._value as PaymentsPressed;
 }
 
+/// @nodoc
 class _$PaymentsPressed
     with DiagnosticableTreeMixin
     implements PaymentsPressed {
@@ -218,26 +224,22 @@ class _$PaymentsPressed
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result transfersPressed(),
-    @required Result paymentsPressed(),
-    @required Result pageSelected(int pageIndex),
+  TResult when<TResult extends Object?>({
+    required TResult Function() transfersPressed,
+    required TResult Function() paymentsPressed,
+    required TResult Function(int pageIndex) pageSelected,
   }) {
-    assert(transfersPressed != null);
-    assert(paymentsPressed != null);
-    assert(pageSelected != null);
     return paymentsPressed();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result transfersPressed(),
-    Result paymentsPressed(),
-    Result pageSelected(int pageIndex),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? transfersPressed,
+    TResult Function()? paymentsPressed,
+    TResult Function(int pageIndex)? pageSelected,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (paymentsPressed != null) {
       return paymentsPressed();
     }
@@ -246,26 +248,22 @@ class _$PaymentsPressed
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result transfersPressed(TransfersPressed value),
-    @required Result paymentsPressed(PaymentsPressed value),
-    @required Result pageSelected(PageSelected value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(TransfersPressed value) transfersPressed,
+    required TResult Function(PaymentsPressed value) paymentsPressed,
+    required TResult Function(PageSelected value) pageSelected,
   }) {
-    assert(transfersPressed != null);
-    assert(paymentsPressed != null);
-    assert(pageSelected != null);
     return paymentsPressed(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result transfersPressed(TransfersPressed value),
-    Result paymentsPressed(PaymentsPressed value),
-    Result pageSelected(PageSelected value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TransfersPressed value)? transfersPressed,
+    TResult Function(PaymentsPressed value)? paymentsPressed,
+    TResult Function(PageSelected value)? pageSelected,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (paymentsPressed != null) {
       return paymentsPressed(this);
     }
@@ -277,6 +275,7 @@ abstract class PaymentsPressed implements HomeEvent {
   const factory PaymentsPressed() = _$PaymentsPressed;
 }
 
+/// @nodoc
 abstract class $PageSelectedCopyWith<$Res> {
   factory $PageSelectedCopyWith(
           PageSelected value, $Res Function(PageSelected) then) =
@@ -284,6 +283,7 @@ abstract class $PageSelectedCopyWith<$Res> {
   $Res call({int pageIndex});
 }
 
+/// @nodoc
 class _$PageSelectedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
     implements $PageSelectedCopyWith<$Res> {
   _$PageSelectedCopyWithImpl(
@@ -295,16 +295,20 @@ class _$PageSelectedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object pageIndex = freezed,
+    Object? pageIndex = freezed,
   }) {
     return _then(PageSelected(
-      pageIndex == freezed ? _value.pageIndex : pageIndex as int,
+      pageIndex == freezed
+          ? _value.pageIndex
+          : pageIndex // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
+/// @nodoc
 class _$PageSelected with DiagnosticableTreeMixin implements PageSelected {
-  const _$PageSelected(this.pageIndex) : assert(pageIndex != null);
+  const _$PageSelected(this.pageIndex);
 
   @override
   final int pageIndex;
@@ -335,32 +339,29 @@ class _$PageSelected with DiagnosticableTreeMixin implements PageSelected {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(pageIndex);
 
+  @JsonKey(ignore: true)
   @override
   $PageSelectedCopyWith<PageSelected> get copyWith =>
       _$PageSelectedCopyWithImpl<PageSelected>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result transfersPressed(),
-    @required Result paymentsPressed(),
-    @required Result pageSelected(int pageIndex),
+  TResult when<TResult extends Object?>({
+    required TResult Function() transfersPressed,
+    required TResult Function() paymentsPressed,
+    required TResult Function(int pageIndex) pageSelected,
   }) {
-    assert(transfersPressed != null);
-    assert(paymentsPressed != null);
-    assert(pageSelected != null);
     return pageSelected(pageIndex);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result transfersPressed(),
-    Result paymentsPressed(),
-    Result pageSelected(int pageIndex),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? transfersPressed,
+    TResult Function()? paymentsPressed,
+    TResult Function(int pageIndex)? pageSelected,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (pageSelected != null) {
       return pageSelected(pageIndex);
     }
@@ -369,26 +370,22 @@ class _$PageSelected with DiagnosticableTreeMixin implements PageSelected {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result transfersPressed(TransfersPressed value),
-    @required Result paymentsPressed(PaymentsPressed value),
-    @required Result pageSelected(PageSelected value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(TransfersPressed value) transfersPressed,
+    required TResult Function(PaymentsPressed value) paymentsPressed,
+    required TResult Function(PageSelected value) pageSelected,
   }) {
-    assert(transfersPressed != null);
-    assert(paymentsPressed != null);
-    assert(pageSelected != null);
     return pageSelected(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result transfersPressed(TransfersPressed value),
-    Result paymentsPressed(PaymentsPressed value),
-    Result pageSelected(PageSelected value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TransfersPressed value)? transfersPressed,
+    TResult Function(PaymentsPressed value)? paymentsPressed,
+    TResult Function(PageSelected value)? pageSelected,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (pageSelected != null) {
       return pageSelected(this);
     }
@@ -399,6 +396,8 @@ class _$PageSelected with DiagnosticableTreeMixin implements PageSelected {
 abstract class PageSelected implements HomeEvent {
   const factory PageSelected(int pageIndex) = _$PageSelected;
 
-  int get pageIndex;
-  $PageSelectedCopyWith<PageSelected> get copyWith;
+  int get pageIndex => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PageSelectedCopyWith<PageSelected> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -15,9 +15,9 @@ import 'orders/orders_state.dart';
 
 enum AppRoute { HOME, ORDERS, CITIES }
 
-typedef PageCreator = Widget Function({Object arguments});
+typedef PageCreator = Widget Function({Object? arguments});
 
-PageCreator page(AppRoute route, {Object arguments}) {
+PageCreator? page(AppRoute route, {Object? arguments}) {
   switch (route) {
     case AppRoute.HOME:
       return ({arguments}) => MultiBlocProvider(
@@ -60,5 +60,4 @@ PageCreator page(AppRoute route, {Object arguments}) {
             child: CitiesPage(),
           );
   }
-  return null;
 }
