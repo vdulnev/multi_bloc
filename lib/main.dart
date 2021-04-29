@@ -19,7 +19,12 @@ class MyApp extends StatelessWidget {
         builder: (context, state) => MaterialApp(
           title: 'Multi Bloc Demo',
           theme: state.theme,
-          home: page(AppRoute.HOME)!(),
+          home: Navigator(
+            pages: [
+              createPage(createPageWidget(AppRoute.HOME)()),
+            ],
+            onPopPage: (route, result) => route.didPop(result),
+          ),
         ),
       ),
     );

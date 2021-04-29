@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:multibloc/orders/cities/cities_bloc.dart';
@@ -15,16 +16,20 @@ import 'orders/orders_state.dart';
 
 enum AppRoute { HOME, ORDERS, CITIES }
 
-typedef PageCreator = Widget Function({Object? arguments});
+typedef PageWidgetCreator = Widget Function({Object? arguments});
 
-PageCreator? page(AppRoute route, {Object? arguments}) {
+PageWidgetCreator createPageWidget(AppRoute route, {Object? arguments}) {
   switch (route) {
     case AppRoute.HOME:
       return ({arguments}) => MultiBlocProvider(
             providers: [
               BlocProvider<HomeBloc>(
                 create: (context) =>
-                    HomeBloc(HomeState(title: "MultiBloc Example", page: 0)),
+                    HomeBloc(HomeState(title: "MultiBloc Example",
+                    pages: [
+                      AppRoute.ORDERS,
+                      AppRoute.CITIES,
+                    ])),
               ),
             ],
             child: HomePage(),
@@ -60,4 +65,8 @@ PageCreator? page(AppRoute route, {Object? arguments}) {
             child: CitiesPage(),
           );
   }
+}
+
+Page createPage(Widget pageWidget) {
+  return MaterialPage(child: pageWidget);
 }

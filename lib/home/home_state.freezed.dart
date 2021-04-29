@@ -17,10 +17,14 @@ class _$HomeStateTearOff {
   const _$HomeStateTearOff();
 
   _HomeState call(
-      {required String title, String? subTitle, required int page}) {
+      {required String title,
+      String? subTitle,
+      required List<AppRoute> pages,
+      AppRoute? page}) {
     return _HomeState(
       title: title,
       subTitle: subTitle,
+      pages: pages,
       page: page,
     );
   }
@@ -33,7 +37,8 @@ const $HomeState = _$HomeStateTearOff();
 mixin _$HomeState {
   String get title => throw _privateConstructorUsedError;
   String? get subTitle => throw _privateConstructorUsedError;
-  int get page => throw _privateConstructorUsedError;
+  List<AppRoute> get pages => throw _privateConstructorUsedError;
+  AppRoute? get page => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeStateCopyWith<HomeState> get copyWith =>
@@ -44,7 +49,8 @@ mixin _$HomeState {
 abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res>;
-  $Res call({String title, String? subTitle, int page});
+  $Res call(
+      {String title, String? subTitle, List<AppRoute> pages, AppRoute? page});
 }
 
 /// @nodoc
@@ -59,6 +65,7 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
   $Res call({
     Object? title = freezed,
     Object? subTitle = freezed,
+    Object? pages = freezed,
     Object? page = freezed,
   }) {
     return _then(_value.copyWith(
@@ -70,10 +77,14 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
           ? _value.subTitle
           : subTitle // ignore: cast_nullable_to_non_nullable
               as String?,
+      pages: pages == freezed
+          ? _value.pages
+          : pages // ignore: cast_nullable_to_non_nullable
+              as List<AppRoute>,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
-              as int,
+              as AppRoute?,
     ));
   }
 }
@@ -84,7 +95,8 @@ abstract class _$HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
           _HomeState value, $Res Function(_HomeState) then) =
       __$HomeStateCopyWithImpl<$Res>;
   @override
-  $Res call({String title, String? subTitle, int page});
+  $Res call(
+      {String title, String? subTitle, List<AppRoute> pages, AppRoute? page});
 }
 
 /// @nodoc
@@ -100,6 +112,7 @@ class __$HomeStateCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
   $Res call({
     Object? title = freezed,
     Object? subTitle = freezed,
+    Object? pages = freezed,
     Object? page = freezed,
   }) {
     return _then(_HomeState(
@@ -111,28 +124,35 @@ class __$HomeStateCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
           ? _value.subTitle
           : subTitle // ignore: cast_nullable_to_non_nullable
               as String?,
+      pages: pages == freezed
+          ? _value.pages
+          : pages // ignore: cast_nullable_to_non_nullable
+              as List<AppRoute>,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
-              as int,
+              as AppRoute?,
     ));
   }
 }
 
 /// @nodoc
 class _$_HomeState implements _HomeState {
-  _$_HomeState({required this.title, this.subTitle, required this.page});
+  _$_HomeState(
+      {required this.title, this.subTitle, required this.pages, this.page});
 
   @override
   final String title;
   @override
   final String? subTitle;
   @override
-  final int page;
+  final List<AppRoute> pages;
+  @override
+  final AppRoute? page;
 
   @override
   String toString() {
-    return 'HomeState(title: $title, subTitle: $subTitle, page: $page)';
+    return 'HomeState(title: $title, subTitle: $subTitle, pages: $pages, page: $page)';
   }
 
   @override
@@ -144,6 +164,8 @@ class _$_HomeState implements _HomeState {
             (identical(other.subTitle, subTitle) ||
                 const DeepCollectionEquality()
                     .equals(other.subTitle, subTitle)) &&
+            (identical(other.pages, pages) ||
+                const DeepCollectionEquality().equals(other.pages, pages)) &&
             (identical(other.page, page) ||
                 const DeepCollectionEquality().equals(other.page, page)));
   }
@@ -153,6 +175,7 @@ class _$_HomeState implements _HomeState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(subTitle) ^
+      const DeepCollectionEquality().hash(pages) ^
       const DeepCollectionEquality().hash(page);
 
   @JsonKey(ignore: true)
@@ -165,14 +188,17 @@ abstract class _HomeState implements HomeState {
   factory _HomeState(
       {required String title,
       String? subTitle,
-      required int page}) = _$_HomeState;
+      required List<AppRoute> pages,
+      AppRoute? page}) = _$_HomeState;
 
   @override
   String get title => throw _privateConstructorUsedError;
   @override
   String? get subTitle => throw _privateConstructorUsedError;
   @override
-  int get page => throw _privateConstructorUsedError;
+  List<AppRoute> get pages => throw _privateConstructorUsedError;
+  @override
+  AppRoute? get page => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$HomeStateCopyWith<_HomeState> get copyWith =>

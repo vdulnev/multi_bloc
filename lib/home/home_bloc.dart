@@ -22,7 +22,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     yield event.when(
         transfersPressed: () => state,
         paymentsPressed: () => state,
-        pageSelected: ((page) => state.copyWith(page: page)),
+        pageSelected: ((page) => state.copyWith(page: state.pages[page])),
     );
   }
 
